@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sites d'intervention — Carte</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Carte des sites d'intervention</h1>
+    <a href="admin.html" class="admin-link">Espace admin</a>
+  </header>
+
+  <div class="search-bar">
+    <select id="searchType">
+      <option value="all">Recherche libre</option>
+      <option value="ig">Identifiant géographique (IG)</option>
+      <option value="adresse">Adresse</option>
+      <option value="batiment">Numéro de bâtiment</option>
+      <option value="coord">Coordonnées (lat, lng)</option>
+    </select>
+    <input type="text" id="searchInput" placeholder="Rechercher un point..." />
+    <button id="searchBtn">Rechercher</button>
+    <span id="searchStatus"></span>
+  </div>
+
+  <div id="map"></div>
+
+  <div id="resultsPanel" class="results-panel hidden">
+    <div class="results-header">
+      <span id="resultsCount"></span>
+      <button id="closeResults">✕</button>
+    </div>
+    <div id="resultsList"></div>
+  </div>
+
+  <footer class="site-footer">Créé par Amar Abderrazaq</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
